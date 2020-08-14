@@ -18,18 +18,33 @@
         </li>        
       </ul>
       <ul class="navbar-nav ml-auto">
-         <!-- <li class="nav-item">
-            <a href="/users/paper" class="nav-link">Question Paper</a>
-          </li>        
+      <?php
+        if(isset($_SESSION['email']))
+        {
+        ?>
           <li class="nav-item">
-            <a href="/users/logout" class="nav-link">Logout</a>
-          </li> -->       
+              <a href="blog.php" class="nav-link">Add Blog</a>
+            </li>        
+            <li class="nav-item">
+              <a href="index.php" class="nav-link">Logout</a>
+      <?php
+              session_destroy();
+      ?>
+            </li>  
+      <?php
+        }else
+        {
+      ?>
           <li class="nav-item">
-            <a href="login.php" class="nav-link">Login</a>
-          </li>
-          <li class="nav-item">
-            <a href="register.php" class="nav-link">Register</a>
-          </li>          
+              <a href="login.php" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="register.php" class="nav-link">Register</a>
+            </li>  
+      <?php  
+        }   
+      ?>       
+               
       </ul>
     </div>
   </div>
