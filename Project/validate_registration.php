@@ -8,7 +8,9 @@
     
     $q = "insert into users(username,password,email) values('$username', '$password', '$email')";
     $i = mysqli_query($con, $q) or die(mysqli_error($con));
-    echo "Register successfully completed";
 ?>
-    <meta http-equiv="refresh" content="3;url=login.php" />   
+    <script>
+        alert("User Register Successfully");
+    </script>
+    <meta http-equiv="refresh" content="0;url=login.php" />   
     
